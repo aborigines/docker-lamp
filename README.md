@@ -1,4 +1,4 @@
-# docker-lamp with phalcon2
+# docker-lamp
 
 OS Base On Ubuntu 14.04 (LTS)
 
@@ -6,7 +6,6 @@ OS Base On Ubuntu 14.04 (LTS)
 * apache2
 * mysql
 * php5 with library
- - phalcon library (manual complie)
 
 ### utility
 * openssh-server
@@ -28,5 +27,5 @@ docker build -t xxxx .
 ### 81 for apache2
 ### 2222 for ssh server (password = password)
 ### 33060 for mysql server (no password ) 
-docker run -d -p 81:80 -p 2222:22 -p 33060:3306 -P xxxx
+docker run -d -p 81:80 -p 2222:22 -p 33060:3306 -v $PROJECT:/var/www/html -P xxxx
 ```
